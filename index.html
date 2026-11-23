@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sesión 1: Squash & Stretch, Tinte y Hitstop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cuadro negro donde se dibuja el personaje -->
+  <canvas id="escena" width="720" height="420"></canvas>
+
+  <!-- Acciones para probar las animaciones -->
+  <div class="controles">
+    <button id="atacar">⚔️ Atacar</button>
+    <button id="golpe">💥 Recibir golpe</button>
+  </div>
+
+  <!-- Capas y reto de la sesión (se pueden activar o desactivar) -->
+  <div class="controles">
+    <label><input type="checkbox" id="capa1" checked> Capa 1: Squash &amp; Stretch + Shake</label>
+    <label><input type="checkbox" id="capa2" checked> Capa 2: Tinte de daño</label>
+    <label><input type="checkbox" id="reto1" checked> Reto: Hitstop</label>
+  </div>
+
+  <!-- Los módulos ES requieren servidor local (Live Server o: python -m http.server) -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
