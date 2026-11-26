@@ -47,6 +47,20 @@ export class Character {
     this.idleTimer = Math.random() * Math.PI * 2; // fase aleatoria para que no respiren sincronizados
   }
 
+  // Restablece vida y animaciones (reinicio del combate)
+  reset() {
+    this.currentHp = this.maxHp;
+    this.displayedHp = this.maxHp;
+    this.attackProgress = -1;
+    this.offsetX = 0;
+    this.offsetY = 0;
+    this.scaleX = 1.0;
+    this.scaleY = 1.0;
+    this.shakeTimer = 0;
+    this.tintTimer = 0;
+    this.hitstopTimer = 0;
+  }
+
   // Recibe daño y dispara los efectos visuales
   takeDamage(amount, flags = DEFAULT_FLAGS) {
     this.currentHp = Math.max(0, this.currentHp - amount);

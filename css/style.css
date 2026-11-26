@@ -40,7 +40,12 @@ button {
   font: 600 0.9rem "Segoe UI", sans-serif;
   cursor: pointer;
 }
-button:hover { filter: brightness(1.12); }
+button:hover:not(:disabled) { filter: brightness(1.12); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+button.secundario { background: #475569; }
+
+/* Mensaje del combate */
+#mensaje { min-height: 1.4em; font-size: 0.95rem; text-align: center; }
 
 label { display: flex; align-items: center; gap: 6px; font-size: 0.9rem; cursor: pointer; }
 
